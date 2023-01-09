@@ -5,7 +5,7 @@ async function getData(URL) {
   try {
     const respone = await fetch(URL);
     const data = await respone.json();
-    document.getElementById("lol").textContent = data;
+    document.getElementById("").textContent = data;
   } catch (error) {
     console.log(error);
   }

@@ -1,11 +1,11 @@
 import "../styles/style.css";
 
-const URL = "http://api.chartlyrics.com/GetLyric";
+const URL = "https://genius-song-lyrics1.p.rapidapi.com/songs/lyrics";
 async function getData(URL) {
   try {
     const responses = await fetch(URL);
     const data = await responses.json();
-    document.getElementById(".respone").textContent = data.Lyric;
+    document.getElementById("response").textContent = data.data[0].artist;
   } catch (error) {
     console.log(error);
   }

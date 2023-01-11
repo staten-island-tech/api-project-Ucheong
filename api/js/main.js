@@ -1,6 +1,6 @@
 import "../styles/style.css";
 
-const URL = "https://genius-song-lyrics1.p.rapidapi.com/songs/lyrics";
+const URL = "";
 async function getData(URL) {
   try {
     const responses = await fetch(URL);

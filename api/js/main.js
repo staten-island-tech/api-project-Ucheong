@@ -1,6 +1,6 @@
 import "../styles/style.css";
 
-const URL = "";
+const URL = "https://api.lyrics.ovh";
 async function getData(URL) {
   try {
     const responses = await fetch(URL);
@@ -20,4 +20,8 @@ document.querySelector(".light").addEventListener("click", function () {
 document.querySelector(".dark").addEventListener("click", function () {
   document.body.classList.add("dark");
   document.body.classList.remove("light");
+});
+
+DOMSelectors.form.addEventListener("submit", function (no) {
+  no.preventDefault();
 });

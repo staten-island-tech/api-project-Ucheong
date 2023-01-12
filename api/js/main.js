@@ -31,4 +31,6 @@ function clearinputs() {
 DOMSelectors.form.addEventListener("submit", function (no) {
   no.preventDefault();
   clearinputs();
+  bob();
 });
+ DOMSelectors.input.addEventListener("click", function)

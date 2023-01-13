@@ -1,6 +1,7 @@
 import "../styles/style.css";
 import "./dom";
 import { DOMSelectors } from "./dom";
+import "./link";
 
 // const URL = "https://api.lyrics.ovh";
 // async function getData(URL) {

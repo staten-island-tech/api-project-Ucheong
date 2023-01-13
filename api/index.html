@@ -15,7 +15,9 @@
         <div id="forminput">
           <div class="input1">
             <label for="Search"></label>
-            <input type="text" id="box" placeholder="Search" required />
+            <input type="text" id="box" placeholder="Search" required 
+             onfocus="this.placeholder=''" 
+            onblur="this.placeholder='Search'" />
           </div>
         <div id="input">
           <input type="submit" value="Submit" id="btn">

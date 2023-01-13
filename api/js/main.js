@@ -28,9 +28,7 @@ function clearinputs() {
   DOMSelectors.input.value = "";
 }
 
-DOMSelectors.form.addEventListener("submit", function (no) {
-  no.preventDefault();
+DOMSelectors.form.addEventListener("submit", function (e) {
+  e.preventDefault();
   clearinputs();
-  bob();
 });
- DOMSelectors.input.addEventListener("click", function)

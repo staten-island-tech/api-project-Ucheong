@@ -14,15 +14,12 @@ body,
   } 
 
 body {
-  background-color: var(--white);
-}
-
-body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--white);
 }
 
 button {
@@ -36,9 +33,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -48,13 +47,29 @@ button:focus-visible {
   float: left;
   width: 20%;
   padding: 10px;
-  background: #2196F3;
   color: white;
-  font-size: 17px;
+  font-size: 10px;
   border: 1px solid grey;
   border-left: none; 
   cursor: pointer;
 }
+
+#form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 50vh;
+}
+
+#form-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  height: 10vh;
+} 
 
 .light {
   border-color: black;
@@ -66,24 +81,3 @@ button:focus-visible {
   background-color: var(--black);
   border-color: white;
 }
-
-#form {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  height: 50vh;
-}
-.form-parent {
-  width: 22rem;
-  height: 2.5rem;
-  font-size: 2rem;
-}
-.form-input {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem;
-  height: 10vh;
-} 

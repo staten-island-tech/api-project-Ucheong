@@ -25,11 +25,28 @@ document.querySelector(".dark").addEventListener("click", function () {
   document.body.classList.remove("light");
 });
 
+function createcard() {
+  let name = DOMSelectors.input.value;
+  card(name);
+}
+
+function card(name) {
+  DOMSelectors.display.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="display-card">
+    <img class="display-img" src="${img}"/ >
+    <h2 class="display-team">${name}</h2>
+    <button class="remove" id="btn">Remove</button>
+    </div>`
+  );
+}
+
 function clearinputs() {
   DOMSelectors.input.value = "";
 }
 
 DOMSelectors.form.addEventListener("submit", function (e) {
   e.preventDefault();
+  createcard();
   clearinputs();
 });

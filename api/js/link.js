@@ -1,8 +1,12 @@
-/* .forEach(() => {
-  DOMSelectors.display.insertAdjacentHTML(
-    "beforeend",
-    `<div class= "display-card">
+/* import "../styles/link.css";
 
-    </div>`
-  );
-}); */
+document.querySelector(".light").addEventListener("click", function () {
+  document.body.classList.add("light");
+  document.body.classList.remove("dark");
+});
+
+document.querySelector(".dark").addEventListener("click", function () {
+  document.body.classList.add("dark");
+  document.body.classList.remove("light");
+});
+ */

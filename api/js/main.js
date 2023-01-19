@@ -35,8 +35,7 @@ function card(name) {
     "afterbegin",
     `<div class="display-card">
     <img class="display-img" src="${img}"/ >
-    <h2 class="display-team">${name}</h2>
-    <button class="remove" id="btn">Remove</button>
+    <h2 class="name">${name}</h2>
     </div>`
   );
 }

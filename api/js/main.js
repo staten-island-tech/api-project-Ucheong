@@ -25,7 +25,7 @@ document.querySelector(".dark").addEventListener("click", function () {
   document.body.classList.remove("light");
 });
 
-function createcard() {
+/* function createcard() {
   let name = DOMSelectors.input.value;
   card(name);
 }
@@ -38,7 +38,7 @@ function card(name) {
     <h2 class="name">${name}</h2>
     </div>`
   );
-}
+} */
 
 function clearinputs() {
   DOMSelectors.input.value = "";

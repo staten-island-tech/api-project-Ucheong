@@ -1,4 +1,4 @@
-/* @import url(link.css);
+@import url(link.css);
 html,
 body,
 * {
@@ -54,14 +54,5 @@ button:focus-visible {
   cursor: pointer;
 }
 
-.light {
-    border-color: black;
-    background-color: var(--white);
-  }
+
   
-  .dark {
-    color: white;
-    background-color: var(--black);
-    border-color: white;
-  }
-   */

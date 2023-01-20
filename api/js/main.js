@@ -3,10 +3,12 @@ import "./dom";
 import { DOMSelectors } from "./dom";
 import "./link";
 
-// const URL = "";
-// async function getData(URL) {
+// const characters = "https://rickandmortyapi.com/api/character";
+// const location = "https://rickandmortyapi.com/api/location";
+// const episodes = "https://rickandmortyapi.com/api/episode";
+// async function getData() {
 //   try {
-//     const responses = await fetch(URL);
+//     const responses = await fetch();
 //     const data = await responses.json();
 //     document.getElementById("response").textContent = data.cards.name;
 //   } catch (error) {

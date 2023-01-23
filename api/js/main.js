@@ -8,17 +8,24 @@ const location = "https://rickandmortyapi.com/api/location";
 const episodes = "https://rickandmortyapi.com/api/episode";
 async function getData(characters) {
   try {
-    const responses = await fetch();
+    const responses = await fetch(characters);
     const data = await responses.json();
+    console.log(data);
     data.results.forEach((name) => {
       DOMSelectors.display.insertAdjacentElement;
-      "beforeend", `<h2> ${name.name}</h2>`;
+      "beforeend", `<h2 class= "name"> ${name.name}</h2>`;
     });
   } catch (error) {
     console.log(error);
   }
 }
 getData(characters);
+
+async function init() {
+  let character = await getData();
+  console.log(character);
+}
+init();
 
 document.querySelector(".light").addEventListener("click", function () {
   document.body.classList.add("light");
@@ -30,7 +37,7 @@ document.querySelector(".dark").addEventListener("click", function () {
   document.body.classList.remove("light");
 });
 
-/* function createcard() {
+function createcard() {
   let name = DOMSelectors.input.value;
   card(name);
 }
@@ -43,7 +50,7 @@ function card(name) {
     <h2 class="name">${name}</h2>
     </div>`
   );
-} */
+}
 
 function clearinputs() {
   DOMSelectors.input.value = "";

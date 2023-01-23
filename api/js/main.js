@@ -11,10 +11,9 @@ async function getData(characters) {
     const responses = await fetch();
     const data = await responses.json();
     data.results.forEach((name) => {
-      DOMSelectors.display.insertAdjacentElement;(
-      "beforeend",
-      `<h2> ${name.name}</h2>`
-    ));
+      DOMSelectors.display.insertAdjacentElement;
+      "beforeend", `<h2> ${name.name}</h2>`;
+    });
   } catch (error) {
     console.log(error);
   }

@@ -3,19 +3,23 @@ import "./dom";
 import { DOMSelectors } from "./dom";
 import "./link";
 
-// const characters = "https://rickandmortyapi.com/api/character";
-// const location = "https://rickandmortyapi.com/api/location";
-// const episodes = "https://rickandmortyapi.com/api/episode";
-// async function getData() {
-//   try {
-//     const responses = await fetch();
-//     const data = await responses.json();
-//     document.getElementById("response").textContent = data.cards.name;
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
-// getData(URL);
+const characters = "https://rickandmortyapi.com/api/character";
+const location = "https://rickandmortyapi.com/api/location";
+const episodes = "https://rickandmortyapi.com/api/episode";
+async function getData(characters) {
+  try {
+    const responses = await fetch();
+    const data = await responses.json();
+    data.results.forEach((name) => {
+      DOMSelectors.display.insertAdjacentElement;(
+      "beforeend",
+      `<h2> ${name.name}</h2>`
+    ));
+  } catch (error) {
+    console.log(error);
+  }
+}
+getData(characters);
 
 document.querySelector(".light").addEventListener("click", function () {
   document.body.classList.add("light");

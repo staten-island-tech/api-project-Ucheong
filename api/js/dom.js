@@ -3,7 +3,7 @@ let DOMSelectors = {
   formparent: document.getElementById("form-parent"),
   input: document.getElementById("box"),
   btn: document.getElementById("btn"),
-  display: document.querySelector(".display"),
+  display: document.getElementById("display"),
 };
 
 export { DOMSelectors };

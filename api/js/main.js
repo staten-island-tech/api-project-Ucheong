@@ -6,24 +6,24 @@ import "./link";
 const characters = "https://rickandmortyapi.com/api/character";
 const location = "https://rickandmortyapi.com/api/location";
 const episodes = "https://rickandmortyapi.com/api/episode";
-async function getData(characters) {
-  try {
-    const responses = await fetch(characters);
-    const data = await responses.json();
-    console.log(data);
-    data.results.forEach((name) => {
-      DOMSelectors.display.insertAdjacentElement;
-      "beforeend", `<h2 class= "name"> ${name.name}</h2>`;
-    });
-  } catch (error) {
-    console.log(error);
-  }
+
+async function getData() {
+  const responses = await fetch(characters);
+  const data = await responses.json();
+  return data;
 }
-getData(characters);
 
 async function init() {
   let character = await getData();
-  console.log(character);
+  character.results.forEach((bob) => {
+    DOMSelectors.display.insertAdjacentHTML(
+      "afterbegin",
+      `<div class="display-card">
+      <h2 class="name">${bob.name}</h2>
+      <img src="${bob.image}" alt="image of ${bob.name}"> 
+      </div>`
+    );
+  });
 }
 init();
 
@@ -37,20 +37,10 @@ document.querySelector(".dark").addEventListener("click", function () {
   document.body.classList.remove("light");
 });
 
-function createcard() {
-  let name = DOMSelectors.input.value;
-  card(name);
-}
-
-function card(name) {
-  DOMSelectors.display.insertAdjacentHTML(
-    "afterbegin",
-    `<div class="display-card">
-    <img class="display-img" src="${img}"/ >
-    <h2 class="name">${name}</h2>
-    </div>`
-  );
-}
+// function createcard() {
+//   let name = DOMSelectors.input.value;
+//   card(name);
+// }
 
 function clearinputs() {
   DOMSelectors.input.value = "";

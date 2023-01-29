@@ -2,6 +2,9 @@ import "../styles/style.css";
 import "./dom";
 import { DOMSelectors } from "./dom";
 import "./link";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 const characters = "https://rickandmortyapi.com/api/character";
 const location = "https://rickandmortyapi.com/api/location";
@@ -12,7 +15,7 @@ async function original() {
   character.results.forEach((bob) => {
     DOMSelectors.display.insertAdjacentHTML(
       "afterbegin",
-      `<div class="display-card">
+      `<div class="display-card" data-aos="fade-down">
     <h2 class="name">${bob.name}</h2>
     <img src="${bob.image}" alt="image of ${bob.name}">
     <a href="">More Details</a>
@@ -36,7 +39,7 @@ async function card() {
   character.results.forEach((bob) => {
     DOMSelectors.display.insertAdjacentHTML(
       "afterbegin",
-      `<div class="display-card">
+      `<div class="display-card" data-aos="fade-down">
     <h2 class="name">${bob.name}</h2>
     <img src="${bob.image}" alt="image of ${bob.name}">
     <a href="">More Details</a>
@@ -57,7 +60,7 @@ async function init() {
     filtered.map((bob) => {
       DOMSelectors.display.insertAdjacentHTML(
         "afterbegin",
-        `<div class="display-card">
+        `<div class="display-card" data-aos="fade-down">
     <h2 class="name">${bob.name}</h2>
     <img src="${bob.image}" alt="image of ${bob.name}"> 
     <a href="">More Details</a>

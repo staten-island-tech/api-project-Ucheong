@@ -15,6 +15,10 @@ document.querySelector(".characters").addEventListener("click", function () {
   charactercard();
 });
 
+// document.querySelector(".details").addEventListener("click", function () {
+//   document.body.innerHTML = ``;
+// });
+
 async function getCharacters() {
   const responses = await fetch(characters);
   const data = await responses.json();
@@ -26,7 +30,7 @@ async function charactercard() {
   character.results.forEach((bob) => {
     DOMSelectors.display.insertAdjacentHTML(
       "afterbegin",
-      `<div class="display-card" data-aos="fade-down">
+      `<div class="display-card1" data-aos="fade-down">
       <h2 class="name">${bob.name}</h2>
       <img src="${bob.image}" alt="${bob.name}">
       <button class="details"> More Details </button>
@@ -46,7 +50,7 @@ async function init1() {
     filtered.map((bob) => {
       DOMSelectors.display.insertAdjacentHTML(
         "afterbegin",
-        `<div class="display-card" data-aos="fade-down">
+        `<div class="display-card1" data-aos="fade-down">
       <h2 class="name">${bob.name}</h2>
       <img src="${bob.image}" alt="${bob.name}">
       <button class="details"> More Details </button>   

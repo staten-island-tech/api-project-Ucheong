@@ -29,28 +29,29 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  border-color: black;
 }
-
 button:hover {
   border-color: #646cff;
 }
-
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
 
 #btn {
   float: left;
   padding: 10px;
   color: white;
   font-size: 10px;
-  border: 1px solid grey;
+  border-color: white;
+  background-color: black;
   border-left: none; 
   cursor: pointer;
+  display: inline;
 }
 
 #form {
@@ -70,6 +71,10 @@ button:focus-visible {
   height: 10vh;
 } 
 
+.theme {
+ text-align: center;
+}
+
 .light {
   border-color: black;
   background-color: var(--white);
@@ -81,6 +86,11 @@ button:focus-visible {
   border-color: white;
 }
 
+.filter {
+text-align: center;
+margin-top: 2rem;
+}
+
 #display {
   display: flex;
   flex-direction: row;
@@ -90,7 +100,18 @@ button:focus-visible {
   margin: 2rem auto;
 }
 
-#display-card {
+.display-card1{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 55rem;
+  height: 55rem;
+  align-items: center;
+  border-radius: 3rem;
+  border:solid;
+}
+
+.display-card2 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -99,4 +120,33 @@ button:focus-visible {
   align-items: center;
   border-radius: 3rem;
   border:solid;
+}
+
+.display-card3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 25%;
+  height: 55rem;
+  align-items: center;
+  border-radius: 3rem;
+  border:solid;
+}
+
+.title {
+  font-size: 5rem;
+}
+
+.error {
+  font-size: 5rem;
+  color: red;
+  text-align: center;
+}
+
+.box {
+  display: flex;
+  height: 2rem;
+  width: 40rem;
+  align-items: center;
+  justify-content: center;
 }

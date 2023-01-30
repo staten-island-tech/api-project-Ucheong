@@ -15,6 +15,10 @@ document.querySelector(".location").addEventListener("click", function () {
   locationcard();
 });
 
+// document.querySelector(".residents").addEventListener("click", function () {
+//   document.body.innerHTML = ``;
+// });
+
 async function getLocation() {
   const responses = await fetch(location);
   const data = await responses.json();
@@ -26,10 +30,11 @@ async function locationcard() {
   locations.results.forEach((bob) => {
     DOMSelectors.display.insertAdjacentHTML(
       "afterbegin",
-      `<div class="display-card" data-aos="fade-down">
+      `<div class="display-card2" data-aos="fade-down">
         <h2 class="name"> Name: ${bob.name}</h2>
         <h2 class="type"> Type: ${bob.type}</h2>
         <h2 class="dimension"> Dimension: ${bob.dimension}</h2>
+        <button class="residents"> Residents </button>
         </div>`
     );
   });
@@ -46,10 +51,11 @@ async function init2() {
     filtered.map((bob) => {
       DOMSelectors.display.insertAdjacentHTML(
         "afterbegin",
-        `<div class="display-card" data-aos="fade-down">
+        `<div class="display-card2" data-aos="fade-down">
         <h2 class="name"> Name: ${bob.name}</h2>
         <h2 class="type"> Type: ${bob.type}</h2>
         <h2 class="dimension"> Dimension: ${bob.dimension}</h2>
+        <button class="residents"> Residents </button>
         </div>`
       );
     });

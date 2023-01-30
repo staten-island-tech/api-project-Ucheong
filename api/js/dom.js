@@ -4,6 +4,7 @@ let DOMSelectors = {
   input: document.querySelector(".box"),
   btn: document.getElementById("btn"),
   display: document.getElementById("display"),
+  label: document.querySelector(".label"),
 };
 
 export { DOMSelectors };

@@ -9,6 +9,8 @@ AOS.init();
 const characters = "https://rickandmortyapi.com/api/character";
 
 document.querySelector(".characters").addEventListener("click", function () {
+  DOMSelectors.label.innerHTML = ``;
+  DOMSelectors.label.innerHTML = `Character Name`;
   DOMSelectors.display.innerHTML = ``;
   charactercard();
 });
@@ -26,8 +28,8 @@ async function charactercard() {
       "afterbegin",
       `<div class="display-card" data-aos="fade-down">
       <h2 class="name">${bob.name}</h2>
-      <img src="${bob.image}" alt="image of ${bob.name}">
-      <a href="">More Details</a>
+      <img src="${bob.image}" alt="${bob.name}">
+      <button class="details"> More Details </button>
       </div>`
     );
   });
@@ -46,8 +48,8 @@ async function init1() {
         "afterbegin",
         `<div class="display-card" data-aos="fade-down">
       <h2 class="name">${bob.name}</h2>
-      <img src="${bob.image}" alt="image of ${bob.name}"> 
-      <a href="">More Details</a>
+      <img src="${bob.image}" alt="${bob.name}">
+      <button class="details"> More Details </button>   
       </div>`
       );
     });

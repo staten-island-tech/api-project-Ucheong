@@ -12,15 +12,19 @@
   </head>
   <body>
     <h1>Rick and Morty</h1>
-    <button class="light">Light</button>
-    <button class="dark">Dark</button>
-    <button class="characters">Characters</button>
-    <button class="location">Location</button>
-    <button class="episodes">Episodes</button>
+    <div class="theme">
+      <button class="light">Light</button>
+      <button class="dark">Dark</button>
+    </div>
+    <div id="R&M">
+      <button class="characters">Characters</button>
+      <button class="location">Location</button>
+      <button class="episodes">Episodes</button>
+    </div>
     <section id="form-parent">
       <form id="form" action="action_page.php">
         <div id="form-input">
-          <label for="Search"></label>
+          <label for="Search" class="label"></label>
           <input
             type="text"
             class="box"
@@ -39,6 +43,7 @@
     <script type="module" src="./js/episode.js"></script>
     <script type="module" src="./js/character.js"></script>
     <script type="module" src="./js/location.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
 

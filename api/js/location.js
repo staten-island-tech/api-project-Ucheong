@@ -9,6 +9,8 @@ AOS.init();
 const location = "https://rickandmortyapi.com/api/location";
 
 document.querySelector(".location").addEventListener("click", function () {
+  DOMSelectors.label.innerHTML = ``;
+  DOMSelectors.label.innerHTML = `Location Name`;
   DOMSelectors.display.innerHTML = ``;
   locationcard();
 });

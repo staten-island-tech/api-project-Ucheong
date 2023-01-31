@@ -1,7 +1,6 @@
 import "../styles/style.css";
 import "./dom";
 import { DOMSelectors } from "./dom";
-import "./link";
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();
@@ -41,20 +40,16 @@ async function episodecard() {
   });
 }
 
-// let displaycard = document.querySelector("div.display-card"),
-//   people = displaycard.querySelector("button.people");
-// people.addEventListener("click", function () {
-//   document.body.innerHTML = ``;
-// });
-
 async function init3() {
   try {
     DOMSelectors.display.innerHTML = ``;
     await episodecaller();
     let e = DOMSelectors.input.value;
-    let filtered = episodes.results.filter(
-      (lol) => lol.episode.includes(`${e}`) || lol.episode === `${e}`
-    );
+    let filtered = episodes.forEach((episode) => {
+      episode.results.filter(
+        (lol) => lol.episode.includes(`${e}`) || lol.episode === `${e}`
+      );
+    });
     filtered.map((bob) => {
       DOMSelectors.display.insertAdjacentHTML(
         "afterbegin",
@@ -76,6 +71,36 @@ async function init3() {
     DOMSelectors.input.value = "";
   } catch (error) {}
 }
+
+// async function init3() {
+//   try {
+//     DOMSelectors.display.innerHTML = ``;
+//     await episodecaller();
+//     let e = DOMSelectors.input.value;
+//     let filtered = episodes.results.filter(
+//       (lol) => lol.episode.includes(`${e}`) || lol.episode === `${e}`
+//     );
+//     filtered.map((bob) => {
+//       DOMSelectors.display.insertAdjacentHTML(
+//         "afterbegin",
+//         `<div class="display-card3" data-aos="fade-down">
+//         <h2 class="name">Name: ${bob.name}</h2>
+//         <h2 class="date">Air Date: ${bob.air_date}</h2>
+//         <h2 class="episode">Episode: ${bob.episode}</h2>
+//         <button class="people"> Characters in the Episode </button>
+//         </div>`
+//       );
+//     });
+//     if (DOMSelectors.display.innerHTML.includes(`${e}`)) {
+//     } else {
+//       DOMSelectors.display.insertAdjacentHTML(
+//         "afterbeg in",
+//         `<p class="error"> NOT FOUND </p>`
+//       );
+//     }
+//     DOMSelectors.input.value = "";
+//   } catch (error) {}
+// }
 
 DOMSelectors.form.addEventListener("submit", function (e) {
   e.preventDefault();

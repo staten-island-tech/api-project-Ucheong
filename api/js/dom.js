@@ -5,6 +5,11 @@ let DOMSelectors = {
   btn: document.getElementById("btn"),
   display: document.getElementById("display"),
   label: document.querySelector(".label"),
+  characters: document.querySelector(".characters"),
+  location: document.querySelector(".location"),
+  episodes: document.querySelector(".episodes"),
+  residents: document.querySelector(".residents"),
+  people: document.querySelector(".people"),
 };
 
 export { DOMSelectors };

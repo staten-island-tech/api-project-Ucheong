@@ -1,7 +1,6 @@
 import "../styles/style.css";
 import "./dom";
 import { DOMSelectors } from "./dom";
-import "./link";
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();
@@ -15,19 +14,32 @@ document.querySelector(".characters").addEventListener("click", function () {
   charactercard();
 });
 
+let character = [];
+
+async function charactercaller() {
+  character = [];
+  for (let i = 1; i <= 42; i++) {
+    let page1 = await fetch(
+      `https://rickandmortyapi.com/api/location?page=${i}`
+    );
+    character.push(await page1.json());
+  }
+}
+
 // document.querySelector(".details").addEventListener("click", function () {
 //   document.body.innerHTML = ``;
 // });
 
-async function getCharacters() {
-  const responses = await fetch(characters);
-  const data = await responses.json();
-  return data;
-}
+// async function getCharacters() {
+//   const responses = await fetch(characters);
+//   const data = await responses.json();
+//   return data;
+// }
 
 async function charactercard() {
-  let character = await getCharacters();
+  await charactercaller();
   character.results.forEach((bob) => {
+    // array inside array
     DOMSelectors.display.insertAdjacentHTML(
       "afterbegin",
       `<div class="display-card1" data-aos="fade-down">

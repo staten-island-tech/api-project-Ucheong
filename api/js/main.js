@@ -155,7 +155,7 @@ async function locationGeneral() {
       DOMSelectors.display.insertAdjacentHTML(
         "afterbegin",
         `<div class="display-card2" data-aos="fade-down">
-        <h2 class="name"> Name: ${bob.name}</h2>
+        <h2 class="name2"> Name: ${bob.name}</h2>
         <h2 class="type"> Type: ${bob.type}</h2>
         <h2 class="dimension"> Dimension: ${bob.dimension}</h2>
         </div>`
@@ -181,7 +181,7 @@ async function locationFilter() {
       DOMSelectors.display.insertAdjacentHTML(
         "afterbegin",
         `<div class="display-card2" data-aos="fade-down">
-        <h2 class="name"> Name: ${bob.name}</h2>
+        <h2 class="name2"> Name: ${bob.name}</h2>
         <h2 class="type"> Type: ${bob.type}</h2>
         <h2 class="dimension"> Dimension: ${bob.dimension}</h2>
         </div>`
@@ -219,7 +219,7 @@ async function characterGeneral() {
       DOMSelectors.display.insertAdjacentHTML(
         "beforeend",
         `<div class="display-card1" data-aos="fade-down">
-      <h2 class="name">${bob.name}</h2>
+      <h2 class="name1">${bob.name}</h2>
       <img src="${bob.image}" alt="${bob.name}">
       </div>`
       );
@@ -244,7 +244,7 @@ async function characterFilter() {
       DOMSelectors.display.insertAdjacentHTML(
         "afterbegin",
         `<div class="display-card1" data-aos="fade-down">
-      <h2 class="name">${bob.name}</h2>
+      <h2 class="name1">${bob.name}</h2>
       <img src="${bob.image}" alt="${bob.name}" class="img">
       </div>`
       );

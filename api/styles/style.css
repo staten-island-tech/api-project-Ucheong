@@ -59,7 +59,8 @@ button:focus-visible {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: 50vh;
+  height: 15rem;
+  
 }
 
 #form-input {
@@ -104,11 +105,12 @@ margin-top: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 55rem;
-  height: 55rem;
+  width: 30%;
+  height: 45rem;
   align-items: center;
   border-radius: 3rem;
   border:solid;
+  margin-bottom: 2rem;
 }
 
 .display-card2 {
@@ -154,4 +156,12 @@ margin-top: 2rem;
   justify-content: center;
 }
 
-.dimension {}
+@media only screen and (min-width: 1px) and (max-width: 1500px) {
+  img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+

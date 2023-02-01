@@ -8,8 +8,6 @@ let DOMSelectors = {
   characters: document.querySelector(".characters"),
   location: document.querySelector(".location"),
   episodes: document.querySelector(".episodes"),
-  residents: document.querySelector(".residents"),
-  people: document.querySelector(".people"),
 };
 
 export { DOMSelectors };

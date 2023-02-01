@@ -94,7 +94,6 @@ async function episodeGeneral() {
       <h2 class="name">Name: ${bob.name}</h2>
       <h2 class="date">Air Date: ${bob.air_date}</h2>
       <h2 class="episode">Episode: ${bob.episode}</h2>
-      <button class="people"> Characters in the Episode </button>
       </div>`
       );
     });
@@ -121,7 +120,6 @@ async function episodeFilter() {
         <h2 class="name">Name: ${bob.name}</h2>
         <h2 class="date">Air Date: ${bob.air_date}</h2>
         <h2 class="episode">Episode: ${bob.episode}</h2>
-        <button class="people"> Characters in the Episode </button>
         </div>`
       );
     });
@@ -160,7 +158,6 @@ async function locationGeneral() {
         <h2 class="name"> Name: ${bob.name}</h2>
         <h2 class="type"> Type: ${bob.type}</h2>
         <h2 class="dimension"> Dimension: ${bob.dimension}</h2>
-        <button class="residents"> Residents </button>
         </div>`
       );
     });
@@ -187,7 +184,6 @@ async function locationFilter() {
         <h2 class="name"> Name: ${bob.name}</h2>
         <h2 class="type"> Type: ${bob.type}</h2>
         <h2 class="dimension"> Dimension: ${bob.dimension}</h2>
-        <button class="residents"> Residents </button>
         </div>`
       );
     });
@@ -225,7 +221,6 @@ async function characterGeneral() {
         `<div class="display-card1" data-aos="fade-down">
       <h2 class="name">${bob.name}</h2>
       <img src="${bob.image}" alt="${bob.name}">
-      <button class="details"> More Details </button>
       </div>`
       );
     });
@@ -250,8 +245,7 @@ async function characterFilter() {
         "afterbegin",
         `<div class="display-card1" data-aos="fade-down">
       <h2 class="name">${bob.name}</h2>
-      <img src="${bob.image}" alt="${bob.name}">
-      <button class="details"> More Details </button>   
+      <img src="${bob.image}" alt="${bob.name}" class="img">
       </div>`
       );
     });

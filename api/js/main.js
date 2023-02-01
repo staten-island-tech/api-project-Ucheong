@@ -64,6 +64,7 @@ function main(x) {
       locationGeneral();
       break;
     case "character":
+      characterGeneral();
       break;
     default:
       console.log("error");
@@ -213,8 +214,6 @@ async function charactercaller() {
       `https://rickandmortyapi.com/api/location?page=${i}`
     );
     character.push(await page.json());
-    characterGeneral();
-    character = [];
   }
 }
 

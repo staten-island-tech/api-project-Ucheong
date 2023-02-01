@@ -180,8 +180,7 @@ async function locationFilter() {
         }
       });
     });
-    console.log(filtered);
-    filtered.map((bob) => {
+    filtered.forEach((bob) => {
       DOMSelectors.display.insertAdjacentHTML(
         "afterbegin",
         `<div class="display-card2" data-aos="fade-down">
@@ -211,7 +210,7 @@ async function charactercaller() {
   character = [];
   for (let i = 1; i <= 42; i++) {
     let page = await fetch(
-      `https://rickandmortyapi.com/api/location?page=${i}`
+      `https://rickandmortyapi.com/api/character?page=${i}`
     );
     character.push(await page.json());
   }
@@ -246,7 +245,7 @@ async function characterFilter() {
         }
       });
     });
-    filtered.map((bob) => {
+    filtered.forEach((bob) => {
       DOMSelectors.display.insertAdjacentHTML(
         "afterbegin",
         `<div class="display-card1" data-aos="fade-down">
